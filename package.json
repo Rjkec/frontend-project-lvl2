@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "gendiff": "bin/gendiff.js"
+    "gendiff": "src/index.js"
   },
-  "type": "commonjs",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rjkec/frontend-project-lvl2.git"
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Rjkec/frontend-project-lvl2#readme",
   "dependencies": {
     "commander": "^9.3.0",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   }
 }
