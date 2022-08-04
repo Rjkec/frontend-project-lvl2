@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 
-const getFormat = (filename) => extname(filename).slice(1);
+//const getFormat = (filename) => extname(filename).slice(1);
 
 const path1 = path.resolve(process.cwd(),'./__fixtures__/file1.json');
 const path2 = path.resolve(process.cwd(),'./__fixtures__/file2.json');
