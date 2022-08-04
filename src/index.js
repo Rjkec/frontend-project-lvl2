@@ -2,6 +2,7 @@ import parsers from './parser.js';
 import getCompareOfTwoMassives from './make_tree.js';
 import { resolve, extname } from 'path';
 import { readFileSync } from 'fs';
+import process from 'process';
 
 //const __filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(__filename);
