@@ -13,4 +13,4 @@ const jsonFile2 = fs.readFileSync(path2, 'utf8');
 export const myJson1 = JSON.parse(jsonFile1);
 export const myJson2 = JSON.parse(jsonFile2);
 
-console.log(myJson2);
+console.log(myJson1);

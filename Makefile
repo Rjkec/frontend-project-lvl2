@@ -6,3 +6,6 @@ gendiff_first:
 
 lint:
 	eslint --fix .
+
+test:
+	npx jest

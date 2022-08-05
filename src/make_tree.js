@@ -1,18 +1,5 @@
 import _ from 'lodash';
 
-const file1 = {
-  "host": "hexlet.io",
-  "timeout": 50,
-  "proxy": "123.234.53.22",
-  "follow": false
-}
-
-const file2 = {
-  "timeout": 20,
-  "verbose": true,
-  "host": "hexlet.io"
-}
-
 const getCompareOfTwoMassives = (firstJson,secondJson) => {
 
   let result = {};
@@ -28,17 +15,17 @@ const getCompareOfTwoMassives = (firstJson,secondJson) => {
 
   result = sortedKey.map((key) => {
 
-    if (!_.has(file1, key)) {
+    if (!_.has(firstJson, key)) {
       return {
         name: key,
-        value: file2[key],
+        value: secondJson[key],
         type: 'added',
       };
     }
-    if (!_.has(file2, key)) {
+    if (!_.has(secondJson, key)) {
       return {
         name: key,
-        value: file1[key],
+        value: firstJson[key],
         type: 'deleted',
       };
     }
@@ -49,17 +36,17 @@ const getCompareOfTwoMassives = (firstJson,secondJson) => {
     //     children: buildTree(file1[key], file2[key]),
     //   };
     // }
-    if (file1[key] !== file2[key]) {
+    if (firstJson[key] !== secondJson[key]) {
       return {
         name: key,
-        value1: file1[key],
-        value2: file2[key],
+        value1: firstJson[key],
+        value2: secondJson[key],
         type: 'changed',
       };
     }
     return {
       name: key,
-      value: file1[key],
+      value: firstJson[key],
       type: 'unchanged',
     };
   });
